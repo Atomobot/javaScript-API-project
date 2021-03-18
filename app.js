@@ -1,41 +1,34 @@
-const button = document.querySelector(".container button");
-const jokeText = document.querySelector(".container .joke p");
+const bounceClass = 'bouncer';
+const bounceTarget = '.title';
+const box = ".container";
+const button = document.querySelector(box+" button");
+const jokeAPI = 'https://icanhazdadjoke.com/';
+const jokeText = document.querySelector(box+" .joke p");
+const gifPath = 'https://media.giphy.com/media/';
+const gifSuffix = '/giphy.gif';
+const dadGifs = [
+    "l1J9AnvuqmlX7fz2w",
+    "fGRLn3m6XvmHeLNOzn",
+    "3o6ZtbrMqneLcJGtZ6",
+    "ZgSCwxQMHWDSETpYFL",
+    "3owvKeE82XiHObCiUE",
+    "dB0MobdNQ321T8APAR"
+];
+let randomNum = 0; // initialisation of the random gif
+let lastRand = 0;
 
 document.addEventListener("DOMContentLoaded", getJoke);
-
 button.addEventListener("click", getJoke);
 
-
 async function getJoke() {
-    const jokeData = await fetch("https://icanhazdadjoke.com/", {
+    let jokeData = await fetch( jokeAPI, {
         headers: {
             Accept: "application/json"
         }
-        
     });
-    
-    const jokeObj = await jokeData.json();
-    
+    let jokeObj = await jokeData.json();
     jokeText.innerHTML = jokeObj.joke;
-    
-    function chooseGif() {
-        document.querySelector(".container").setAttribute("style", "background-Image: url(" + dadGif[randomNum] + ")")
-        let randomNum = Math.floor((Math.random(0) * dadGif.length - 1));
-    };
-
-    let  = dadGif[
-        "https://media.giphy.com/media/l1J9AnvuqmlX7fz2w/giphy.gif",
-        "https://media.giphy.com/media/fGRLn3m6XvmHeLNOzn/giphy.gif",
-        "https://media.giphy.com/media/3o6ZtbrMqneLcJGtZ6/giphy.gif",
-        "https://media.giphy.com/media/ZgSCwxQMHWDSETpYFL/giphy.gif",
-        "https://media.giphy.com/media/3owvKeE82XiHObCiUE/giphy.gif",
-        "https://media.giphy.com/media/dB0MobdNQ321T8APAR/giphy.gif"
-        
-    ];
-    
-    
-    
+    while( randomNum === lastRand ) { randomNum = Math.floor(Math.random() * dadGifs.length); }
+    lastRand = randomNum;
+    document.querySelector(box).setAttribute("style", "background-image: url("+gifPath+dadGifs[randomNum]+gifSuffix+")");
 }
-
-
-
