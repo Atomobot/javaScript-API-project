@@ -1,0 +1,79 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(8, 119, 230);
+  color: white;
+}
+.joke-box {
+  min-height: 100vh;
+  width: 100%;
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  position: absolute;
+  top: 50px;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+}
+.container {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: rgb(1, 30, 58);
+  border-radius: 20px;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
+  background-image: url("https://media.giphy.com/media/l1J9AnvuqmlX7fz2w/giphy.gif ");
+  background-size: cover;
+  box-shadow: 0 0 140px 10px rgba(255, 255, 255, 0.5);
+  color: white;
+  text-shadow: 10px #030303;
+}
+
+.container p {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 3rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+}
+#press {
+    box-shadow: 0px 10px 14px -7px #bbbbbb;
+    background: linear-gradient(to bottom, #231ffc 5%, #020057 100%);
+    border-radius: 20px;
+    border: 0;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: "Anton", sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 6px 12px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #030303;
+    outline: none;
+    display: flex;
+    margin-top: 2rem;
+
+}
+#press:hover {
+    background: linear-gradient(to bottom, #020057 5%, #231ffc 100%);
+    background-color: #72b352;
+    box-shadow: 0px -8px 14px 0px #bbbbbb;
+  };
