@@ -12,7 +12,11 @@ const dadGifs = [
     "3o6ZtbrMqneLcJGtZ6",
     "ZgSCwxQMHWDSETpYFL",
     "3owvKeE82XiHObCiUE",
-    "dB0MobdNQ321T8APAR"
+    "dB0MobdNQ321T8APAR",
+    "3orifdxh94UCCYVeW4",
+    "3o6EhMDUHhSgpa4fTi",
+    "mgBcFrFyREm8E",
+    "hsvpkeDUunmN9PJHy7"
 ];
 let randomNum = 0; // initialisation of the random gif
 let lastRand = 0;
